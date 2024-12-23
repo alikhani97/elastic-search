@@ -1,0 +1,33 @@
+{
+  "name": "alikhani/elastic-search",
+  "description": "package to integrate with elastic-search",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Mehdi Alikhani",
+      "email": "alikhani.mehdi@hotmail.com",
+      "role": "Backend Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.0.*|8.1.*|8.2.*|8.3.*",
+    "laravel/framework": "8.*|9.*|10.*|11.*",
+    "elasticsearch/elasticsearch": "^8.16"
+  },
+  "autoload": {
+    "psr-4": {
+      "Alikhani\\ElasticSearch\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Alikhani\\ElasticSearch\\ElasticSearchServiceProvider"
+      ],
+      "aliases": {
+        "ElasticSearch": "Alikhani\\ElasticSearch\\Facades\\ElasticSearch"
+      }
+    }
+  }
+}
